@@ -1,0 +1,11 @@
+1. Who is the senior most employee based on job title?
+Ans. SELECT * FROM employee
+ORDER BY levels DESC
+LIMIT 1
+
+2. Which countries have the most Invoices?
+Ans. SELECT COUNT(*) AS C, billing_country
+FROM invoice
+GROUP BY billing_country
+ORDER BY C DESC
+
