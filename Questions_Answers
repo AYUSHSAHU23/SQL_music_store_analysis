@@ -31,7 +31,7 @@ GROUP BY customer.customer_id
 ORDER BY total DESC
 LIMIT 1
 
-Moderate Questions:
+** Moderate Questions ** 
 
 1. Write query to return the email, first name, last name, & Genre of all Rock Music listeners. Return your list ordered alphabetically by email starting with A.
 - SELECT DISTINCT email, first_name, last_name
@@ -56,3 +56,18 @@ WHERE genre.name LIKE 'Rock'
 GROUP BY artist.artist_id
 ORDER BY num_of_songs DESC
 LIMIT 10
+
+3. Return all the track names that have a song length longer than the average song length. Return the Name and Milliseconds for each track. Order by the song length with the longest songs listed first..
+- SELECT name, milliseconds 
+FROM track_1
+WHERE milliseconds > (
+    SELECT AVG(milliseconds) AS average_track_length
+    from track_1)
+ORDER BY milliseconds DESC
+
+
+
+
+                      
+
+
